@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moj Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+    }
+    header nav a {
+      color: #fff;
+      margin-left: 1rem;
+      text-decoration: none;
+    }
+    .hero {
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: white;
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #f4f4f4;
+      padding: 2rem;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    form {
+      display: grid;
+      gap: 1rem;
+      max-width: 500px;
+      margin: auto;
+    }
+    input, textarea {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      width: 100%;
+    }
+    button {
+      padding: 0.8rem;
+      border: none;
+      border-radius: 5px;
+      background: #4facfe;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Moja Agencija</h2>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">O nama</a>
+      <a href="#services">Usluge</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>Dobrodošli!</h1>
+    <p>Pravimo moderne i brze sajtove.</p>
+    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Kontaktirajte nas</button>
+  </section>
+
+  <section class="section" id="about">
+    <h2>O nama</h2>
+    <p>Mi smo tim entuzijasta koji voli da pravi kvalitetne web sajtove. Fokusirani smo na jednostavnost, dizajn i funkcionalnost.</p>
+  </section>
+
+  <section class="section" id="services">
+    <h2>Naše usluge</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Web dizajn</h3>
+        <p>Kreiramo moderne i responsivne sajtove.</p>
+      </div>
+      <div class="card">
+        <h3>SEO</h3>
+        <p>Optimizujemo sajtove za pretraživače.</p>
+      </div>
+      <div class="card">
+        <h3>Podrška</h3>
+        <p>Obezbeđujemo tehničku pomoć i održavanje.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Kontaktirajte nas</h2>
+    <form>
+      <input type="text" placeholder="Vaše ime" required>
+      <input type="email" placeholder="Vaš email" required>
+      <textarea rows="5" placeholder="Poruka" required></textarea>
+      <button type="submit">Pošalji</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Moja Agencija | <a href="https://github.com/tvojusername" style="color:#00f2fe;">GitHub</a></p>
+  </footer>
+</body>
+</html>
