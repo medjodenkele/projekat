@@ -1,140 +1,128 @@
 <!DOCTYPE html>
-<html lang="sr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moj Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-    }
-    header {
-      background: #333;
-      color: #fff;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-    }
-    header nav a {
-      color: #fff;
-      margin-left: 1rem;
-      text-decoration: none;
-    }
-    .hero {
-      background: linear-gradient(to right, #4facfe, #00f2fe);
-      color: white;
-      text-align: center;
-      padding: 6rem 2rem;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-    .section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-    .card {
-      background: #f4f4f4;
-      padding: 2rem;
-      border-radius: 8px;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-    form {
-      display: grid;
-      gap: 1rem;
-      max-width: 500px;
-      margin: auto;
-    }
-    input, textarea {
-      padding: 0.8rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1rem;
-      width: 100%;
-    }
-    button {
-      padding: 0.8rem;
-      border: none;
-      border-radius: 5px;
-      background: #4facfe;
-      color: white;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    footer {
-      background: #333;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Denke Art</title>
 </head>
 <body>
   <header>
-    <h2>Moja Agencija</h2>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">O nama</a>
-      <a href="#services">Usluge</a>
-      <a href="#contact">Kontakt</a>
-    </nav>
+    <!-- Navbar -->
+
+    <div class="navbar">
+      <div class="container flex">
+        <div class="logo">
+          <a href="#">
+          <img src="images/logo.png" alt="logo">
+          </a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#bio">Bio</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#exhibitions">Exhibitions</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
 
-  <section class="hero" id="home">
-    <h1>Dobrodošli!</h1>
-    <p>Pravimo moderne i brze sajtove.</p>
-    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Kontaktirajte nas</button>
+  <!-- Top Section -->
+
+  <section class="top bg-primary py-3">
+    <div class=" container grid">
+     <div class="top_info">
+        <img src="images/shape_white.png"  alt="">
+        <h1 class="lg">Danilo Spasović Denke</h1>
+        <p class="lead">The Art of Grotesque Faces, Deformed Figures, Broken Worlds, and Restless Visions</p>
+      </div>
+    <div class="image_wrapper">
+      <img src="images/denke.jpg" alt="">
+    </div>
+  </div>
   </section>
 
-  <section class="section" id="about">
-    <h2>O nama</h2>
-    <p>Mi smo tim entuzijasta koji voli da pravi kvalitetne web sajtove. Fokusirani smo na jednostavnost, dizajn i funkcionalnost.</p>
+  <!-- Biography -->
+
+ <section id="bio" class="bio py-5">
+    <div class="container">
+      <img src="images/shape.png" class="shape" alt=""> <h2 class="md my-1">About</h2>
+      <p class="lead">Denke is a multidisciplinary artist working in both painting and music. In his music career, he was a singer, guitarist, and songwriter in the bands Elektrolasta and Strašni Haremski Čuvari, and today he performs under the name Mega Denke. He has been actively engaged in painting since 2008, when he began working within the art collective Mubareć. He is also one of the founders of the association Art Brut Serbia, which promotes outsider art and artists outside the mainstream. Since 2024, he has been a permanent member of the Center for Depth Art.
+      </p>
+      <p class="lead">His art is marked by a raw, expressive aesthetic, developed outside the framework of formal art training. Denke paints in an automatic and intuitive way, guided by impulse rather than planned composition. His works usually depict expressive anthropomorphic and zoomorphic figures, deformed, grotesque, and mutated—beings on the threshold of the human, animal, and fantastic. These figures appear in scenes that evoke mythological motifs and archetypal patterns, though without a clearly developed narrative. His painting is an act of personal introspection—a visual reflection of inner tensions, conflicts, and frustrations, often imbued with irony and a humorous detachment.
+      </p>
+    </div>
   </section>
 
-  <section class="section" id="services">
-    <h2>Naše usluge</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Web dizajn</h3>
-        <p>Kreiramo moderne i responsivne sajtove.</p>
-      </div>
-      <div class="card">
-        <h3>SEO</h3>
-        <p>Optimizujemo sajtove za pretraživače.</p>
-      </div>
-      <div class="card">
-        <h3>Podrška</h3>
-        <p>Obezbeđujemo tehničku pomoć i održavanje.</p>
+   <!-- Works -->
+
+  <section id="works" class="works bg-primary py-5">
+    <div class="container">
+      <img src="images/shape_white.png" class="shape" alt=""><h2 class="md py-3">Paintings</h2>
+      <div class="works-grid">
+        <img src="images/The Introspection.jpg" alt="Artwork 1">
+        <img src="images/Alien Moses.jpg" alt="Artwork 2">
+        <img src="images/Vjekoslav.jpg" alt="Artwork 3">
+        <img src="images/The Angry Bear.jpg" alt="Artwork 4">
+        <img src="images/Dancers.jpg" alt="Artwork 5">
+        <img src="images/Skull.jpg" alt="Artwork 5">
       </div>
     </div>
   </section>
 
-  <section class="section" id="contact">
-    <h2>Kontaktirajte nas</h2>
-    <form>
-      <input type="text" placeholder="Vaše ime" required>
-      <input type="email" placeholder="Vaš email" required>
-      <textarea rows="5" placeholder="Poruka" required></textarea>
-      <button type="submit">Pošalji</button>
-    </form>
+   <!-- Exhibitions -->
+
+  <section id="exhibitions" class="exhibitions py-4">
+    <div class="container">
+      <img src="images/shape.png" class="shape" alt=""><h2 class="md py-3">Exhibitions</h2>
+      <ul>
+        <li><strong>2010</strong> – Collective Mubareć Exhibition, Elektrika Gallery, Pančevo</li>
+        <li><strong>2010</strong> – Collective Mubareć Exhibition, ZMUC Cultural Center, Belgrade</li>
+        <li><strong>2012</strong> - Collective Mubareć Exhibition, CRACK fumetti dirompenti Festival, Forte Prenestino, Rome</li>
+        <li><strong>2012</strong> –  Collective Mubareć Exhibition, Novo Doba Festival, Inex Film, Belgrade</li>
+        <li><strong>2013</strong> –  First Art Brut Serbia Exhibition, Cultural Center, Sopot</li>
+        <li><strong>2015</strong> –  Collective Mubareć Exhibition within the FIJUK Fair, CUK Imago, Belgrade</li>
+        <li><strong>2020</strong> –  Dreamcatchers, Exhibition of Serbian and Croatian Marginal Art, Museum of Contemporary Art, Zagreb</li>
+        <li><strong>2024</strong> –  Art Brut Serbia Collective Exhibition, IDYLLEREI Festival, Nuremberg</li>
+      </ul>
+    </div>
   </section>
 
+  <!-- Contact -->
+
+  <section id="contact" class="contact bg-primary py-4" >
+    <div class="container">
+
+    <img src="images/shape_white.png" class="shape" alt=""><h2 class="md py-3">Contact Me</h2>
+     <div class="contact-form">
+        <form>
+          <div class="form-control">
+            <input type="text" name="first-name" placeholder="First Name" required>
+          </div>
+          <div class="form-control">
+            <input type="text" name="last-name" placeholder="Last Name" required>
+          </div>
+          <div class="form-control">
+            <input type="email" name="email" placeholder="Email" required>
+          </div>
+            <input type="submit" value="Send" class="btn btn-light">
+        </form>
+      </div>
+    <p>For inquiries and collaborations:</p>
+    <a href="mailto:danilospasovic@gmail.com">Email</a>
+    <a href="https://instagram.com/megadenke">Instagram</a>
+    <a href="https://www.facebook.com/denkele">Facebook</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Moja Agencija | <a href="https://github.com/tvojusername" style="color:#00f2fe;">GitHub</a></p>
+    © 2025 Art Portfolio – Made with ❤️ in HTML & CSS
   </footer>
+
 </body>
 </html>
